@@ -30,7 +30,8 @@ enum custom_keycodes {
     C_COPY,
     C_PASTE,
     OS_LSFT,
-    OS_LCTL
+    OS_LCTL,
+    RS_ENT
 };
 
 #define C_LEAD QK_LEADER
@@ -53,6 +54,7 @@ enum custom_keycodes {
 #define OS_RSFT OSM(MOD_RSFT)
 #define OS_LCTL OSM(MOD_LCTL)
 #define OS_RCTL OSM(MOD_RCTL)
+#define RS_ENT RSFT_T(KC_ENT)
 
 
 
@@ -60,9 +62,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK] = LAYOUT(
       KC_ESC,    KC_1,   KC_2,    KC_3,      KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,     KC_9,    KC_0,      KC_LGUI,
       KC_TAB,     KC_Q,    KC_W,    KC_F,      KC_P,    KC_B,                         KC_J,    KC_L,    KC_U,     KC_Y,    KC_QUOT,   QK_REP,
-      OS_LCTL,    KC_A,    KC_R,    KC_S,      KC_T,    KC_G,                         KC_M,    KC_N,    KC_E,     KC_I,    KC_O,      OS_RCTL,
-      OS_LSFT,    KC_Z,    KC_X,    KC_C,      KC_D,    KC_V,                         KC_K,    KC_H,    KC_COMM,  KC_DOT,  KC_SLSH,   OS_RSFT,
-                           C_LEAD, C_PASTE,                                                           C_UNDO,  CW_TOGG, 
+      OS_LSFT,    KC_A,    KC_R,    KC_S,      KC_T,    KC_G,                         KC_M,    KC_N,    KC_E,     KC_I,    KC_O,      OS_RCTL,
+      OS_LCTL,    KC_Z,    KC_X,    KC_C,      KC_D,    KC_V,                         KC_K,    KC_H,    KC_COMM,  KC_DOT,  KC_SLSH,   RS_ENT,
+                           KC_UNDS, C_PASTE,                                                           C_UNDO,  KC_UNDS, 
                                                ALT_DEL, NAV_SPC,  SYN_ENT,  NAV_DEL,  SYN_BSPC,  OS_FUN,
                                                         OS_LCTL, C_LEAD,   C_UNDO,   OS_RSFT
   ),
@@ -71,8 +73,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_ESC,  KC_1,  KC_2,       KC_3,    KC_4,    KC_5,                          KC_6,    KC_7,    KC_8,     KC_9,    KC_0,      KC_LGUI,
       KC_TAB,    KC_Q,  KC_W,       KC_E,    KC_R,    KC_T,                          KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,      QK_REP,
       OS_LCTL,   KC_A,  KC_S,       KC_D,    KC_F,    KC_G,                          KC_H,    KC_J,    KC_K,     KC_L,    KC_QUOT,   OS_LCTL,
-      OS_LSFT,   KC_Z,  KC_X,       KC_C,    KC_V,    KC_B,                          KC_N,    KC_M,    KC_COMM,  KC_DOT,  KC_SLSH,   OS_RSFT,
-                           C_LEAD, C_PASTE,                                                           C_UNDO,  CW_TOGG, 
+      OS_LSFT,   KC_Z,  KC_X,       KC_C,    KC_V,    KC_B,                          KC_N,    KC_M,    KC_COMM,  KC_DOT,  KC_SLSH,   RS_ENT,
+                           KC_UNDS, C_PASTE,                                                           C_UNDO,  KC_UNDS, 
                                                ALT_DEL, NAV_SPC,  SYN_ENT,  NAV_DEL,  SYN_BSPC,  OS_FUN,
                                                         OS_LCTL, C_LEAD,   C_UNDO,   OS_RSFT
   ),
