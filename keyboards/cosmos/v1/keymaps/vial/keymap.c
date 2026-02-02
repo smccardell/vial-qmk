@@ -117,7 +117,7 @@ void leader_end_user(void) {
         SEND_STRING("select count(*)\n  from ");
     } else if (leader_sequence_four_keys(KC_D, KC_O, KC_P, KC_L)) {
         // Leader, d, o, p, l => dbms_oupput.put_line('');
-        SEND_STRING("dbms_oupput.put_line('');");
+        SEND_STRING("dbms_output.put_line('');");
     }  
     // if (leader_sequence_one_key(KC_F)) {
     //     // Leader, f => Types the below string
